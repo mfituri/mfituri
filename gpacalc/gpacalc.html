@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPA Calculator</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td>Course: <b>Probability Theory and Random Processes</b></td>
+		<td>Units: 9.0</td>
+		<td>Grade: <input id="p"></input></td>
+	</tr>
+	<tr>
+		<td>Course: <b>Basic Logic</b></td>
+		<td>Units: 9.0</td>
+		<td>Grade: <input id="bl"></input></td>
+	</tr>
+	<tr>
+		<td>Course: <b>Computer Networks</b></td>
+		<td>Units: 12.0</td>
+		<td>Grade: <input id="n"></input></td>
+	</tr>
+	<tr>
+		<td>Course: <b>The Information Systems Milieux</b></td>
+		<td>Units: 9.0</td>
+		<td>Grade: <input id="m"></input></td>
+	</tr>
+	<tr>
+		<td>Course: <b>Design Fundamentals II</b></td>
+		<td>Units: 9.0</td>
+		<td>Grade: <input id="d"></input></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><button onclick="calculate()">Calculate</button></td>
+		<td><div id="gpa"></div></td>
+	</tr>
+</table>
+</body>
+
+<script type="text/javascript">
+	function calculate() {
+		console.log("calculate called");
+		var p = document.getElementById("p").value;
+		var bl = document.getElementById("bl").value;
+		var n = document.getElementById("n").value;
+		var m = document.getElementById("m").value;
+		var d = document.getElementById("d").value;
+
+		document.getElementById("gpa").innerHTML = (p*9 + bl*9 + n*12 + m*9 + d*9) / 48
+	}
+</script>
+
+</html>
